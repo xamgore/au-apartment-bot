@@ -19,5 +19,5 @@ sudo pip install --upgrade -r requirements.txt
 To add a task to cron run `crontab -e`, then add the line:
 
 ```
-*/30 * * * *   cd /home/xamgore/au-appartment-bot/ && ./main.py
+*/30 * * * *   cd /home/xamgore/au-apartment-bot/ && ./main.py
 ```
