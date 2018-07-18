@@ -17,7 +17,7 @@ for msg in mail.fetch():
     to_html = escape if is_plain else remove_unallowed_tags
 
     text = unicode_unescape(to_html(source)).strip()
-    subject = msg.subject.lstrip('Re: ')
+    subject = msg.subject.lstrip('Re: ').lstrip('Fwd: ')
     author = ''  # + ', '.join(box['name'] for box in msg.sent_from)
 
     nl = '\n' if len(text.split('\n')) > 2 else ''
