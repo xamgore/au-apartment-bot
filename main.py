@@ -36,7 +36,7 @@ for msg in mail.fetch():
                 bot.sendDocument(chat_id, file, at['filename'])
 
         status = 'Новость успешно опубликована.\nЭто сообщение автоматическое, отвечать на него не нужно.'
-        mail.send_email(msg.sent_from[0]['email'], status, 'Статус отправки')
+        mail.send_email(msg.sent_from[0]['email'], status, msg.subject)
 
     except TelegramError as e:
         del msg.raw_email
