@@ -1,0 +1,7 @@
+TM_TOKEN: 'Create new bot in @BotFather chat'
+CHANNEL: -208794526
+GROUP: -208794526
+
+EMAIL_LOGIN: 'example@ya.ru'
+EMAIL_PASS: 'password'
+INBOX: 'example+app@ya.ru'
