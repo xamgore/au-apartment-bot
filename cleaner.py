@@ -12,4 +12,5 @@ def remove_unallowed_tags(text):
 
 
 def unicode_unescape(text):
-    return re.sub(r'\\[uU]0*([a-z0-9]{4,})', r'&#x\1;', text)
+    to_xml = lambda x: f'&#x{x.group(1).lstrip("0")};'
+    return re.sub(r'\\[uU]([a-z0-9]{8}|[a-z0-9]{4})', to_xml, text)
